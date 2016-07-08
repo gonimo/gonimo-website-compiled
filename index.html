@@ -1,18 +1,92 @@
-<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:foo="http://www.w3.org/2000/svg">
+<html>
   <head>
-    <title>gonimo.com ...</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        max-width: 800px;
-        margin: auto;
-      }
+    <title>Gonimo - Under Construction</title>
+    <style type="text/css">
+  body {
+    padding: 0px 0px 0px 0px;
+    margin:  0px 0px 0px 0px;
+    font-weight: bold;
+  }
+  div#ucimg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+  }
+/*** wide screen ***/
+@media (min-aspect-ratio: 1920/1080) and (min-width: 960px) {
+  div#ucimg {
+    min-height: 540px;
+    background-image: url(guc-wide.jpg) ;
+    background-position: center;
+    background-size: contain;
+    /* color: lightgreen;
+     * border: lightgreen thick solid;
+     */
+  } 
+}
+/*** wide but small screen ***/
+@media (min-aspect-ratio: 1920/1080) and (max-width: 959px) {
+  div#ucimg {
+    min-width: 640px;
+    min-height: 540px;
+    background-image: url(guc-wide.jpg) ;
+    background-position: center;
+    background-size: cover;
+    /* color: lightblue;
+     * border: lightblue thick solid;
+     */
+  }
+}
+/*** less wide screen ***/
+@media (max-aspect-ratio: 1920/1080) and (min-aspect-ratio: 1280/1080) {
+  div#ucimg {
+    min-width: 640px;
+    min-height: 540px;
+    background-image: url(guc-lesswide.jpg) ;
+    background-position: center;
+    background-size: cover;
+    /* color: yellow;
+     * border: yellow thick solid;
+     */
+  }
+}
+/*** even less wide screen ***/
+@media (max-aspect-ratio: 1280/1080) and (min-aspect-ratio: 4/5) {
+  div#ucimg {
+    min-width: 640px;
+    min-height: 540px;
+    background-image: url(guc-cutlesswide.jpg) ;
+    background-position: center;
+    background-size: contain;
+    /* color: white;
+     * border: white thick solid;
+     */
+  }
+}
+/*** tall screen ***/
+@media (max-aspect-ratio: 4/5) {
+  div#ucimg {
+    min-height: 960px;
+    min-width: 540px;
+    background-image: url(guc-narrow.jpg);
+    background-position: center;
+    background-size: contain;
+    /* color: red;
+     * border: red thick solid;
+     */
+  }
+}
     </style>
   </head>
   <body>
-    <script src="./app.js"></script>
-    <noscript>This is not the page you are looking for. He can go about his business. Enable JavaScript.</noscript>
+
+    <div id="ucimg" onclick="window.location.href = 'mailto:hello@gonimo.com';">
+      &nbsp;
+    </div>
+
   </body>
 </html>
-
