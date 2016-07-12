@@ -13,71 +13,103 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: black;
     background-repeat: no-repeat;
+    background-color: #656565;
   }
+/*** ultra-wide screen ***/
+@media (min-aspect-ratio: 1920/1080)
+   and (min-width: 960px) {
+  div#ucimg {
+    min-height: 504px;
+    background-image: url(guc-ultrawide.jpg) ;
+    background-position: top;
+    background-size: contain;
+    /** color: turquoise;
+     ** border: turquoise thick solid;
+     **/
+  } 
+}
 /*** wide screen ***/
-@media (min-aspect-ratio: 1920/1080) and (min-width: 960px) {
+@media (min-aspect-ratio: 1920/1080)
+   and (max-aspect-ratio: 1920/1008)
+   and (min-width: 960px) {
   div#ucimg {
     min-height: 540px;
-    background-image: url(guc-wide.jpg) ;
-    background-position: center;
+    background-image: url(guc-ultrawide.jpg) ;
+    background-position: top;
     background-size: contain;
-    /* color: lightgreen;
-     * border: lightgreen thick solid;
-     */
+    /** color: lightgreen;
+     ** border: lightgreen thick solid;
+     **/
   } 
 }
 /*** wide but small screen ***/
-@media (min-aspect-ratio: 1920/1080) and (max-width: 959px) {
+@media (min-aspect-ratio: 1920/1080)
+   and (max-width: 959px) {
   div#ucimg {
     min-width: 640px;
     min-height: 540px;
     background-image: url(guc-wide.jpg) ;
     background-position: center;
     background-size: cover;
-    /* color: lightblue;
-     * border: lightblue thick solid;
-     */
+    /** color: lightblue;
+     ** border: lightblue thick solid;
+     **/
   }
 }
 /*** less wide screen ***/
-@media (max-aspect-ratio: 1920/1080) and (min-aspect-ratio: 1280/1080) {
+@media (max-aspect-ratio: 1920/1080)
+   and (min-aspect-ratio: 1280/1080) {
   div#ucimg {
     min-width: 640px;
     min-height: 540px;
     background-image: url(guc-lesswide.jpg) ;
     background-position: center;
     background-size: cover;
-    /* color: yellow;
-     * border: yellow thick solid;
-     */
+    /** color: yellow;
+     ** border: yellow thick solid;
+     **/
   }
 }
 /*** even less wide screen ***/
-@media (max-aspect-ratio: 1280/1080) and (min-aspect-ratio: 4/5) {
+@media (max-aspect-ratio: 1280/1080)
+   and (min-aspect-ratio: 4/5) {
   div#ucimg {
     min-width: 640px;
     min-height: 540px;
     background-image: url(guc-cutlesswide.jpg) ;
     background-position: center;
     background-size: contain;
-    /* color: white;
-     * border: white thick solid;
-     */
+    /** color: white;
+     ** border: white thick solid;
+     **/
   }
 }
 /*** tall screen ***/
-@media (max-aspect-ratio: 4/5) {
+@media (max-aspect-ratio: 4/5)
+   and (min-aspect-ratio: 1080/1680) {
   div#ucimg {
-    min-height: 960px;
     min-width: 540px;
-    background-image: url(guc-narrow.jpg);
-    background-position: center;
+    min-height: 155vw;
+    background-image: url(guc-tall.jpg);
+    background-position: top;
     background-size: contain;
-    /* color: red;
-     * border: red thick solid;
-     */
+    /** color: red;
+     ** border: red thick solid;
+     **/
+  }
+}
+/*** too tall screen ***/
+@media (max-aspect-ratio: 1080/1680) {
+  div#ucimg {
+    min-width: 540px;
+    min-height: 840px;
+    background-image: url(guc-tall.jpg);
+    background-position: top;
+    background-size: contain;
+    /** color: purple;
+     ** border: purple thick solid;
+     **/
   }
 }
     </style>
